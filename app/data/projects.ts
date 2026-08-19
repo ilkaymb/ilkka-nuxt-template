@@ -113,6 +113,29 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'teknokiyas',
+    title: 'TeknoKıyas',
+    description: {
+      tr: 'Web scraping ile üç e-ticaret sitesinden çektiğimiz laptop verilerini tek bir sayfada gösterip karşılaştırdığımız bir proje. Kısa süre önce baştan tasarlayıp yeniden yayına aldık.',
+      en: 'A project that pulls laptop listings from three e-commerce sites via web scraping and shows them side by side so you can compare prices. We recently gave it a fresh redesign and put it back online.',
+    },
+    longDescription: {
+      tr: 'TeknoKıyas, bir yazılım laboratuvarı dersi için yaptığımız bir proje: N11, Vatan Bilgisayar ve Teknosa\'dan web scraping ile laptop verilerini çekip hepsini tek bir sayfada topluyoruz, böylece üç ayrı sekme arasında gidip gelmek yerine fiyatları tek bakışta karşılaştırabiliyorsun. Kısa süre önce geri dönüp baştan bir tasarım yeniledik: frontend\'i daha sade bir yeşil tema etrafında yeniden kurduk, arama ve filtrelemeyi beklendiği gibi çalışacak hale getirdik ve gerçekten yayına aldık, Vercel ve kendi Hetzner sunucumuzda.',
+      en: 'TeknoKıyas is a project we built for a software lab course: pull laptop listings from N11, Vatan Bilgisayar and Teknosa with web scraping, and put them all in one place so you can compare prices instead of switching between three tabs. We recently went back to it and gave it a proper refresh: redesigned the frontend around a calmer green theme, cleaned up the search and filtering so it behaves the way you\'d expect, and put it back online for real, on Vercel and our own Hetzner server.',
+    },
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
+    image: '/images/projects/TEKNOKIYAS.png',
+    link: 'https://teknokiyas.vercel.app',
+    githubLink: 'https://github.com/ilkaymb/teknokiyas',
+    gallery: [
+      { type: 'image', src: '/projects/teknokiyas/homepage.png', label: { tr: 'Ana sayfa', en: 'Homepage' } },
+      { type: 'image', src: '/projects/teknokiyas/products.png', label: { tr: 'Ürün listesi ve filtreler', en: 'Product listing & filters' } },
+      { type: 'image', src: '/projects/teknokiyas/product-detail.png', label: { tr: 'Ürün detayı', en: 'Product detail' } },
+      { type: 'image', src: '/projects/teknokiyas/contact.png', label: { tr: 'İletişim', en: 'Contact' } },
+      { type: 'image', src: '/projects/teknokiyas/admin.png', label: { tr: 'Admin paneli', en: 'Admin panel' } },
+    ],
+  },
+  {
     slug: 'semantic-split',
     title: 'semantic-split',
     description: {
