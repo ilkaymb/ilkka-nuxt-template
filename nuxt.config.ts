@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'Ilkka — Yazılım Çözümleri',
+      title: 'Ilkka · Yazılım Çözümleri',
       htmlAttrs: { lang: 'tr' },
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

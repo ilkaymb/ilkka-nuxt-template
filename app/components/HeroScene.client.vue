@@ -79,7 +79,7 @@ onMounted(async () => {
   function animate() {
     frameId = requestAnimationFrame(animate)
     const elapsed = (performance.now() - startTime) / 1000
-    // Damped follow instead of snapping straight to the pointer — a calmer, less jumpy motion.
+    // Damped follow instead of snapping straight to the pointer, for a calmer, less jumpy motion.
     currentX += (targetX - currentX) * 0.02
     currentY += (targetY - currentY) * 0.02
     group.rotation.y = elapsed * 0.05 + currentX

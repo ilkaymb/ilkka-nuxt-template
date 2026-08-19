@@ -9,7 +9,7 @@ const status = ref<'idle' | 'sending' | 'sent'>('idle')
 function submit() {
   if (!form.name || !form.email || !form.message) return
   status.value = 'sending'
-  const subject = encodeURIComponent(`Ilkka — ${form.name}`)
+  const subject = encodeURIComponent(`Ilkka: ${form.name}`)
   const body = encodeURIComponent(`${form.message}\n\n${form.email}`)
   window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
   setTimeout(() => {

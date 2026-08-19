@@ -15,7 +15,7 @@ const year = new Date().getFullYear()
           <p class="text-xs text-ink-500">{{ site.footer.tagline[locale] }}</p>
         </div>
       </div>
-      <p class="text-xs text-ink-500 font-mono">© {{ year }} {{ site.name }} — {{ site.footer.rights[locale] }}</p>
+      <p class="text-xs text-ink-500 font-mono">© {{ year }} {{ site.name }} · {{ site.footer.rights[locale] }}</p>
     </div>
   </footer>
 </template>

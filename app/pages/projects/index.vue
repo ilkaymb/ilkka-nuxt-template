@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Ilkka — Projelerimiz' })
+useHead({ title: 'Ilkka · Projelerimiz' })
 </script>
 
 <template>

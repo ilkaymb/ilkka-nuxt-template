@@ -11,7 +11,7 @@ if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 }
 
-useHead({ title: `Ilkka — ${project.value.title}` })
+useHead({ title: `Ilkka · ${project.value.title}` })
 
 const media = computed(() => {
   const p = project.value!
