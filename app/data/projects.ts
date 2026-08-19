@@ -162,17 +162,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'laptop-ecommerce',
-    title: 'Laptop E-Ticaret Sitesi',
-    description: {
-      tr: 'Dinamik ürün listeleri ve güvenli ödeme özelliklerine sahip full-stack e-ticaret sitesi.',
-      en: 'Full-stack e-commerce site with dynamic product listings and secure checkout.',
-    },
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-    image: '/images/projects/laptopEcommerce.jpeg',
-    link: 'https://github.com/ilkaymb/Laptop_Ecommerce_Website_React_Node.js_MongoDB',
-  },
-  {
     slug: 'card-creator',
     title: 'Kart Oluşturucu',
     description: {
@@ -182,60 +171,5 @@ export const projects: Project[] = [
     technologies: ['Next.js', 'React', 'Bootstrap'],
     image: '/images/projects/cardCreator.png',
     link: 'https://card-creator-seven.vercel.app/',
-  },
-  {
-    slug: 'youtube-clone',
-    title: 'Youtube Klon',
-    description: {
-      tr: 'HTML, CSS ve JavaScript kullanılarak yapılan YouTube arayüz klonu.',
-      en: 'YouTube interface clone built with HTML, CSS, and JavaScript.',
-    },
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    image: '/images/projects/youtubeCloneImage.png',
-    link: 'https://github.com/ilkaymb/Youtube-clone-html-css-javascript',
-  },
-  {
-    slug: 'embedded-lab',
-    title: 'Gömülü Sistemler Laboratuvarı',
-    description: {
-      tr: 'Bir üniversite gömülü sistemler laboratuvarı için geliştirilen React projesi.',
-      en: 'React project built for a university embedded systems lab.',
-    },
-    technologies: ['React', 'JavaScript'],
-    image: '/images/projects/embedLab.jpeg',
-    link: 'https://github.com/ilkaymb/kou-embeded-lab-mainpage-project',
-  },
-  {
-    slug: 'password-generator',
-    title: 'Şifre Oluşturucu',
-    description: {
-      tr: 'C# ve Windows Forms kullanılarak geliştirilmiş masaüstü şifre oluşturucu.',
-      en: 'Desktop password generator built with C# and Windows Forms.',
-    },
-    technologies: ['C#', 'Windows Forms'],
-    image: '/images/projects/passwordGenerator.png',
-    link: 'https://github.com/ilkaymb/Password-Generator-Sifre-Olusturucu',
-  },
-  {
-    slug: 'calculator',
-    title: 'Hesap Makinesi',
-    description: {
-      tr: 'C# ve Windows Forms kullanılarak geliştirilmiş masaüstü hesap makinesi.',
-      en: 'Desktop calculator built with C# and Windows Forms.',
-    },
-    technologies: ['C#', 'Windows Forms'],
-    image: '/images/projects/calculater.png',
-    link: 'https://github.com/ilkaymb/Basic-Calculator-Basit-Hesap-Makinesi',
-  },
-  {
-    slug: 'xox',
-    title: 'XOX Masaüstü Uygulaması',
-    description: {
-      tr: 'C# ve Windows Forms kullanılarak geliştirilmiş iki kişilik XOX (tic-tac-toe) oyunu.',
-      en: 'Two-player XOX (Tic-Tac-Toe) game built with C# and Windows Forms.',
-    },
-    technologies: ['C#', 'Windows Forms'],
-    image: '/images/projects/xox.png',
-    link: 'https://github.com/ilkaymb/XOX-2-Kisilik-Oyun',
   },
 ]
