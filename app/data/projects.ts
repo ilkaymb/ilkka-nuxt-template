@@ -113,6 +113,31 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'semantic-split',
+    title: 'semantic-split',
+    description: {
+      tr: 'Çok modelli bir NLP oyun alanı. Bir metni yapıştırıp yedi işlemden geçiriyoruz — anlamsal ayırma, sınıflandırma, duygu analizi, özetleme, anahtar kelime çıkarımı, dil ve toksisite tespiti — birçoğunda iki model arasında seçip karşılaştırma imkanıyla.',
+      en: 'A multi-model NLP playground. Paste text and run it through seven operations — semantic splitting, classification, sentiment, summarization, keyword extraction, language and toxicity detection — several with a choice between two models to compare.',
+    },
+    longDescription: {
+      tr: 'Cümleleri anlamca gruplandıran küçük bir öğrenci projesini bir NLP araç setine dönüştürdük: Vue 3 frontend, altı ek işlem sunan bir Django backend ve Hugging Face Inference API. Her çalıştırma öncekinin üzerine yazmıyor, kayan bir geçmiş listesine ekleniyor, böylece aynı metinde iki farklı modelin sonucunu yan yana karşılaştırabiliyoruz. Backend serverless bir fonksiyon değil, kendi yönettiğimiz bir Hetzner VPS\'te nginx ve gunicorn arkasında çalışıyor.',
+      en: 'We turned a small student project that grouped sentences by meaning into a small NLP toolkit: a Vue 3 frontend, a Django backend, and the Hugging Face Inference API for six additional operations. Every run adds to a scrollable history instead of overwriting the last one, so two models can be compared on the same text side by side. The backend runs on a self-managed Hetzner VPS behind nginx and gunicorn, not a serverless function.',
+    },
+    technologies: ['Vue 3', 'Django', 'Hugging Face', 'Python', 'Vite'],
+    image: '/images/projects/SEMANTIC-SPLIT.png',
+    link: 'https://semantic-split.vercel.app',
+    githubLink: 'https://github.com/ilkaymb/semantic-split',
+    gallery: [
+      { type: 'image', src: '/projects/semantic-split/homepage.png', label: { tr: 'Ana sayfa', en: 'Homepage' } },
+      { type: 'image', src: '/projects/semantic-split/split-result.png', label: { tr: 'Anlamsal ayırma sonucu', en: 'Semantic split result' } },
+      { type: 'image', src: '/projects/semantic-split/classify-result.png', label: { tr: 'Model seçimiyle sınıflandırma', en: 'Classification with model picker' } },
+      { type: 'image', src: '/projects/semantic-split/sentiment-result.png', label: { tr: 'Duygu analizi', en: 'Sentiment analysis' } },
+      { type: 'image', src: '/projects/semantic-split/keywords-result.png', label: { tr: 'Anahtar kelime/varlık çıkarımı', en: 'Keyword/entity extraction' } },
+      { type: 'image', src: '/projects/semantic-split/history-stack.png', label: { tr: 'Çalıştırma geçmişi', en: 'Run history' } },
+      { type: 'image', src: '/projects/semantic-split/english-mode.png', label: { tr: 'İngilizce arayüz', en: 'English UI' } },
+    ],
+  },
+  {
     slug: 'kou-statistics-showcase',
     title: 'KOU Statistics Showcase',
     description: {
