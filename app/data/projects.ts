@@ -161,15 +161,4 @@ export const projects: Project[] = [
       { type: 'image', src: '/projects/vb-ecommerce/user-management.png', label: { tr: 'Kullanıcı ve rol yönetimi', en: 'User & role management' } },
     ],
   },
-  {
-    slug: 'card-creator',
-    title: 'Kart Oluşturucu',
-    description: {
-      tr: 'Görsel olarak UI kartı tasarlayıp kullanıma hazır Next.js bileşen kodu dışa aktaran bir araç.',
-      en: 'Design UI cards visually and export ready-to-use Next.js component code.',
-    },
-    technologies: ['Next.js', 'React', 'Bootstrap'],
-    image: '/images/projects/cardCreator.png',
-    link: 'https://card-creator-seven.vercel.app/',
-  },
 ]
