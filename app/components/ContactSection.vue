@@ -19,14 +19,14 @@ function submit() {
 </script>
 
 <template>
-  <section id="contact" class="relative bg-ink-950 py-24 sm:py-32 border-t border-ink-800 overflow-hidden">
+  <section class="relative bg-ink-950 pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden">
     <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-brand/10 blur-[120px] pointer-events-none" />
 
     <div class="relative container mx-auto px-4 sm:px-6">
       <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
         <div>
           <p class="text-brand-light text-sm font-mono uppercase tracking-wider mb-3">{{ site.contact.eyebrow[locale] }}</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">{{ site.contact.title[locale] }}</h2>
+          <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">{{ site.contact.title[locale] }}</h1>
           <p class="text-ink-300 leading-relaxed mb-8">{{ site.contact.description[locale] }}</p>
 
           <div>

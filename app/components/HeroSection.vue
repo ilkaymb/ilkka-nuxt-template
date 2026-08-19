@@ -5,9 +5,11 @@ const { locale } = useLocale()
 </script>
 
 <template>
-  <section id="home" class="relative overflow-hidden bg-ink-950 pt-32 pb-24 sm:pt-40 sm:pb-32">
+  <section class="relative overflow-hidden bg-ink-950 pt-32 pb-24 sm:pt-40 sm:pb-32">
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
     <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-brand/20 blur-[120px] pointer-events-none" />
+
+    <HeroScene class="absolute inset-0" />
 
     <div class="relative container mx-auto px-4 sm:px-6">
       <div class="max-w-3xl mx-auto text-center">
@@ -25,18 +27,18 @@ const { locale } = useLocale()
         </p>
 
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a
-            href="#projects"
+          <NuxtLink
+            to="/projects"
             class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand hover:bg-brand-light text-white text-sm font-semibold transition-colors"
           >
             {{ site.hero.ctaPrimary[locale] }}
-          </a>
-          <a
-            href="#contact"
+          </NuxtLink>
+          <NuxtLink
+            to="/contact"
             class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md border border-ink-700 hover:border-ink-500 text-white text-sm font-semibold transition-colors"
           >
             {{ site.hero.ctaSecondary[locale] }}
-          </a>
+          </NuxtLink>
         </div>
       </div>
 

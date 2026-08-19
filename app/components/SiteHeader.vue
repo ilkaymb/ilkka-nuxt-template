@@ -5,9 +5,9 @@ const { locale, setLocale } = useLocale()
 const mobileOpen = ref(false)
 
 const links = [
-  { href: '#home', label: site.nav.home },
-  { href: '#projects', label: site.nav.projects },
-  { href: '#contact', label: site.nav.contact },
+  { to: '/', label: site.nav.home },
+  { to: '/projects', label: site.nav.projects },
+  { to: '/contact', label: site.nav.contact },
 ]
 
 function closeMobile() {
@@ -18,20 +18,21 @@ function closeMobile() {
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-ink-950/85 border-b border-ink-700">
     <nav class="container mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2.5 group" @click="closeMobile">
+      <NuxtLink to="/" class="flex items-center gap-2.5 group" @click="closeMobile">
         <img src="/logo-mark.svg" alt="Ilkka logo" class="w-6 h-8 shrink-0" />
         <span class="text-lg font-bold tracking-wide text-white group-hover:text-brand-light transition-colors">{{ site.name }}</span>
-      </a>
+      </NuxtLink>
 
       <div class="hidden md:flex items-center gap-8">
-        <a
+        <NuxtLink
           v-for="link in links"
-          :key="link.href"
-          :href="link.href"
+          :key="link.to"
+          :to="link.to"
           class="text-sm font-medium text-ink-300 hover:text-white transition-colors"
+          active-class="text-white"
         >
           {{ link.label[locale] }}
-        </a>
+        </NuxtLink>
       </div>
 
       <div class="flex items-center gap-3">
@@ -46,12 +47,12 @@ function closeMobile() {
             {{ l }}
           </button>
         </div>
-        <a
-          href="#contact"
+        <NuxtLink
+          to="/contact"
           class="hidden md:inline-flex items-center px-4 py-2 rounded-md bg-brand hover:bg-brand-light text-white text-sm font-semibold transition-colors"
         >
           {{ site.nav.contact[locale] }}
-        </a>
+        </NuxtLink>
         <button
           class="md:hidden text-ink-300 hover:text-white"
           :aria-label="mobileOpen ? 'Close menu' : 'Open menu'"
@@ -64,15 +65,16 @@ function closeMobile() {
     </nav>
 
     <div v-if="mobileOpen" class="md:hidden border-t border-ink-700 bg-ink-950 px-4 py-4 flex flex-col gap-1">
-      <a
+      <NuxtLink
         v-for="link in links"
-        :key="link.href"
-        :href="link.href"
+        :key="link.to"
+        :to="link.to"
         class="py-2.5 text-sm font-medium text-ink-300 hover:text-white transition-colors"
+        active-class="text-white"
         @click="closeMobile"
       >
         {{ link.label[locale] }}
-      </a>
+      </NuxtLink>
       <div class="flex gap-1 border border-ink-700 rounded-md p-0.5 w-fit mt-2">
         <button
           v-for="l in (['tr', 'en'] as const)"
