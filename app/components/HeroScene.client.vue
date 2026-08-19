@@ -27,22 +27,22 @@ onMounted(async () => {
   group.position.set(0, 0.4, -2)
   scene.add(group)
 
-  const geometry = new THREE.IcosahedronGeometry(1.3, 1)
+  const geometry = new THREE.IcosahedronGeometry(1.9, 0)
   const material = new THREE.MeshBasicMaterial({
     color: 0xdc2626,
     wireframe: true,
     transparent: true,
-    opacity: 0.2,
+    opacity: 0.15,
   })
   const mesh = new THREE.Mesh(geometry, material)
   group.add(mesh)
 
-  const innerGeometry = new THREE.IcosahedronGeometry(0.85, 0)
+  const innerGeometry = new THREE.IcosahedronGeometry(1.25, 0)
   const innerMaterial = new THREE.MeshBasicMaterial({
     color: 0xef4444,
     wireframe: true,
     transparent: true,
-    opacity: 0.12,
+    opacity: 0.08,
   })
   const innerMesh = new THREE.Mesh(innerGeometry, innerMaterial)
   group.add(innerMesh)
@@ -59,16 +59,18 @@ onMounted(async () => {
   }
   const particlesGeometry = new THREE.BufferGeometry()
   particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-  const particlesMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.035, transparent: true, opacity: 0.5 })
+  const particlesMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.03, transparent: true, opacity: 0.3 })
   const particles = new THREE.Points(particlesGeometry, particlesMaterial)
   scene.add(particles)
 
   let targetX = 0
   let targetY = 0
+  let currentX = 0
+  let currentY = 0
   function onPointerMove(e: PointerEvent) {
     const rect = parent.getBoundingClientRect()
-    targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 0.6
-    targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 0.6
+    targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 0.3
+    targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 0.3
   }
   window.addEventListener('pointermove', onPointerMove)
 
@@ -77,9 +79,12 @@ onMounted(async () => {
   function animate() {
     frameId = requestAnimationFrame(animate)
     const elapsed = (performance.now() - startTime) / 1000
-    group.rotation.y = elapsed * 0.15 + targetX
-    group.rotation.x = elapsed * 0.08 + targetY
-    particles.rotation.y = -elapsed * 0.03
+    // Damped follow instead of snapping straight to the pointer — a calmer, less jumpy motion.
+    currentX += (targetX - currentX) * 0.02
+    currentY += (targetY - currentY) * 0.02
+    group.rotation.y = elapsed * 0.05 + currentX
+    group.rotation.x = elapsed * 0.025 + currentY
+    particles.rotation.y = -elapsed * 0.012
     renderer.render(scene, camera)
   }
   animate()
@@ -111,7 +116,7 @@ onUnmounted(() => cleanup?.())
 </script>
 
 <template>
-  <div class="pointer-events-none [mask-image:radial-gradient(ellipse_38%_42%_at_50%_32%,black_20%,transparent_100%)]">
+  <div class="pointer-events-none [mask-image:radial-gradient(ellipse_48%_45%_at_50%_32%,black_15%,transparent_100%)]">
     <canvas ref="canvasEl" class="w-full h-full" />
   </div>
 </template>
