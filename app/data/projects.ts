@@ -209,4 +209,27 @@ export const projects: Project[] = [
       { type: 'image', src: '/projects/vb-ecommerce/user-management.png', label: { tr: 'Kullanıcı ve rol yönetimi', en: 'User & role management' } },
     ],
   },
+  {
+    slug: 'sample-menu',
+    title: 'Sample Menu',
+    description: {
+      tr: 'React ile geliştirdiğimiz, responsive ve çok dilli (EN/DE/AR/TR) bir restoran menüsü şablonu.',
+      en: 'Responsive, multilingual (EN/DE/AR/TR) restaurant menu template built with React.',
+    },
+    longDescription: {
+      tr: 'Kategori ve yemek başına ayrı sayfalar, diyet/alerjen etiketleri ve Arapça RTL desteğiyle EN/DE/AR/TR dil seçeneği sunan, fork\'lanabilir bir restoran menüsü şablonu. React, React Router ve react-i18next ile geliştirdik. Vercel\'de public bir GitHub şablonu olarak yayında.',
+      en: 'A forkable restaurant menu template with per-category and per-dish pages, diet/allergen badges, and EN/DE/AR/TR support with RTL for Arabic. Built with React, React Router and react-i18next. Deployed on Vercel as a public GitHub template.',
+    },
+    technologies: ['React', 'React Router', 'react-i18next', 'Vercel'],
+    image: '/images/projects/SAMPLE-MENU.png',
+    link: 'https://restaurant-menu-react-tau.vercel.app',
+    githubLink: 'https://github.com/ilkaymb/restaurant-menu-React',
+    gallery: [
+      { type: 'image', src: '/projects/restaurant-menu/homepage.png', label: { tr: 'Ana sayfa', en: 'Homepage' } },
+      { type: 'image', src: '/projects/restaurant-menu/category.png', label: { tr: 'Kategori sayfası', en: 'Category page' } },
+      { type: 'image', src: '/projects/restaurant-menu/dish-detail.png', label: { tr: 'Ürün detay sayfası', en: 'Dish detail page' } },
+      { type: 'image', src: '/projects/restaurant-menu/arabic-rtl.png', label: { tr: 'Arapça (RTL)', en: 'Arabic (RTL)' } },
+      { type: 'image', src: '/projects/restaurant-menu/mobile.png', label: { tr: 'Mobil görünüm', en: 'Mobile view' } },
+    ],
+  },
 ]
