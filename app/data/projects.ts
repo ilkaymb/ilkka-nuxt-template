@@ -201,8 +201,8 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/ilkaymb/ieee-student-branch-template',
     gallery: [
       { type: 'image', src: '/projects/ieee-student-branch-template/homepage.png', label: { tr: 'Ana sayfa', en: 'Homepage' } },
-      { type: 'image', src: '/projects/ieee-student-branch-template/committee-page.png', label: { tr: 'Komite sayfası', en: 'Committee page' } },
-      { type: 'image', src: '/projects/ieee-student-branch-template/who-we-are.png', label: { tr: 'Biz kimiz sayfası', en: 'Who we are page' } },
+      { type: 'image', src: '/projects/ieee-student-branch-template/committee-page.png', label: { tr: 'Komiteler ızgarası', en: 'Committees grid' } },
+      { type: 'image', src: '/projects/ieee-student-branch-template/who-we-are.png', label: { tr: 'Otomatik üretilen placeholder avatarlar', en: 'Generated placeholder avatars' } },
     ],
   },
   {
