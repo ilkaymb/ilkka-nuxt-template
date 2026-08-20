@@ -185,6 +185,27 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'ieee-student-branch-template',
+    title: 'IEEE Student Branch Template',
+    description: {
+      tr: 'Gerçek bir öğrenci kolunun eski sitesinden yola çıkarak yeniden kurduğumuz, IEEE üniversite öğrenci kolları için yapılandırılabilir bir Next.js şablonu. İki dilli (TR/EN), tüm gerçek üye fotoğrafları yerelde üretilen placeholder avatarlarla değiştirildi.',
+      en: 'A configurable Next.js template for IEEE university student branches, rebuilt from a real branch\'s old site. Bilingual (TR/EN), with every real member photo replaced by locally generated placeholder avatars.',
+    },
+    longDescription: {
+      tr: 'Bu proje, IEEE Kocaeli Üniversitesi\'nin gerçek öğrenci kolu sitesiydi: koda gömülü üye isimleri ve fotoğrafları, gerçek sponsor isimleri ve sadece Türkçe içerik. Onu yeniden kullanılabilir bir şablona dönüştürdük: birbirinin neredeyse aynısı olan yedi komite sayfasını tek bir dinamik route\'a indirdik, next-i18next ile TR/EN desteği ekledik ve tüm gerçek fotoğrafları, dış servise hiç istek atmadan yerelde üretilen baş harf avatarlarıyla değiştirdik. GitHub\'da public bir template repository olarak yayında.',
+      en: 'This started as IEEE Kocaeli University\'s real student branch site: hardcoded member names and photos, real sponsor mentions, and Turkish-only copy. We turned it into a reusable template: seven near-duplicate committee pages collapsed into one dynamic route, TR/EN support added via next-i18next, and every real photo replaced with a deterministic initials avatar generated locally, no external service involved. Published on GitHub as a public template repository.',
+    },
+    technologies: ['Next.js', 'Tailwind CSS', 'next-i18next', 'Vercel'],
+    image: '/images/projects/IEEE-STUDENT-BRANCH-TEMPLATE.png',
+    link: 'https://ieee-kou.vercel.app',
+    githubLink: 'https://github.com/ilkaymb/ieee-student-branch-template',
+    gallery: [
+      { type: 'image', src: '/projects/ieee-student-branch-template/homepage.png', label: { tr: 'Ana sayfa', en: 'Homepage' } },
+      { type: 'image', src: '/projects/ieee-student-branch-template/committee-page.png', label: { tr: 'Komite sayfası', en: 'Committee page' } },
+      { type: 'image', src: '/projects/ieee-student-branch-template/who-we-are.png', label: { tr: 'Biz kimiz sayfası', en: 'Who we are page' } },
+    ],
+  },
+  {
     slug: 'vb-ecommerce',
     title: 'VB Ecommerce',
     description: {
